@@ -1,0 +1,8 @@
+Country,Start year,End year,GDP per capita change (%),CO2 per capita change (%),Finding
+Brazil,1990,2022,90.68,55.7,Growth with rising emissions
+China,1990,2022,544.8,281.71,Growth with rising emissions
+Germany,1990,2022,83.87,-39.98,Relative decoupling
+India,1990,2022,263.06,197.24,Growth with rising emissions
+Italy,1990,2022,38.48,-25.75,Relative decoupling
+United Kingdom,1990,2022,46.15,-56.51,Relative decoupling
+United States,1990,2022,56.33,-26.92,Relative decoupling
