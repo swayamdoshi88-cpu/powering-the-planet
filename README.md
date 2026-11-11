@@ -54,10 +54,11 @@ Powering_the_Planet/
 ├── data/
 │   └── (downloaded CSV datasets)
 └── outputs/
-    ├── co2_emissions_per_capita.png
-    ├── energy_mix.png
-    ├── decoupling_chart.png
-    └── decoupling_results.csv
+    co2_emissions_per_capita.png
+    energy_mix.png
+    decoupling_chart.png
+    decoupling_results.csv
+    emissions_statistics.csv
 ```
 
 ## Technologies and Libraries
@@ -121,6 +122,7 @@ For the 1990–2022 comparison, the results indicate:
 - **Brazil:** GDP per capita increased by approximately 90.68%, while CO₂ emissions per capita increased by 55.70%.
 
 These results suggest that economic growth and declining per-capita emissions occurred together in Italy, Germany, the United Kingdom, and the United States during the period analyzed. In China, India, and Brazil, economic growth coincided with increasing per-capita emissions.
+The project also calculates the mean, median and standard deviation of CO2 emissions per capita for each selected country using NumPy. These statistics provide an additional numerical comparison of emissions across the available observations.
 
 ## Limitations
 
