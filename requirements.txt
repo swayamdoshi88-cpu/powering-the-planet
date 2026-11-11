@@ -1,5 +1,7 @@
+
 pandas==2.3.3
-matplotlib
-numpy
-jupyter
-ipykernel
+numpy==2.0.2
+matplotlib==3.9.4
+notebook==7.5.8
+ipykernel==6.31.0
+ipython==8.18.1
