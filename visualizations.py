@@ -91,7 +91,7 @@ def plot_energy_mix(data, countries, output_path=None):
         ax.set_visible(False)
 
     for ax in axes[:len(countries)]:
-    ax.set_xlabel("Year")
+        ax.set_xlabel("Year")
 
     handles, labels = axes[0].get_legend_handles_labels()
 
