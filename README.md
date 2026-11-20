@@ -107,30 +107,40 @@ Execute the notebook cells in order, from top to bottom. The notebook imports re
 
 Generated charts and analysis results are saved in the `outputs/` folder.
 
+
 ## Analysis and Key Findings
 
-The project includes data loading, country and year filtering, emissions trend analysis, energy-mix visualization, and comparisons of GDP per capita and CO₂ emissions per capita.
+The project compares GDP per capita, CO2 emissions per capita, total CO2 emissions and changes in the energy mix across seven countries.
 
-For the 1990–2022 comparison, the results indicate:
+For the economic comparison, the earliest and latest valid common observations are used. In the current datasets, the comparison period is 1990–2022.
 
-- **Italy:** GDP per capita increased by approximately 38.48%, while CO₂ emissions per capita decreased by 25.75%.
-- **Germany:** GDP per capita increased by approximately 83.87%, while CO₂ emissions per capita decreased by 39.98%.
-- **United Kingdom:** GDP per capita increased by approximately 46.15%, while CO₂ emissions per capita decreased by 56.51%.
-- **United States:** GDP per capita increased by approximately 56.33%, while CO₂ emissions per capita decreased by 26.92%.
-- **China:** GDP per capita increased substantially, alongside a 281.71% increase in CO₂ emissions per capita.
-- **India:** GDP per capita increased substantially, alongside a 197.24% increase in CO₂ emissions per capita.
-- **Brazil:** GDP per capita increased by approximately 90.68%, while CO₂ emissions per capita increased by 55.70%.
+The results show:
 
-These results suggest that economic growth and declining per-capita emissions occurred together in Italy, Germany, the United Kingdom, and the United States during the period analyzed. In China, India, and Brazil, economic growth coincided with increasing per-capita emissions.
-The project also calculates the mean, median and standard deviation of CO2 emissions per capita for each selected country using NumPy. These statistics provide an additional numerical comparison of emissions across the available observations.
+- **Italy:** GDP per capita increased by 38.48%, while CO2 emissions per capita decreased by 25.75%.
+- **Germany:** GDP per capita increased by 83.87%, while CO2 emissions per capita decreased by 39.98%.
+- **United Kingdom:** GDP per capita increased by 46.15%, while CO2 emissions per capita decreased by 56.51%.
+- **United States:** GDP per capita increased by 56.33%, while CO2 emissions per capita decreased by 26.92%.
+- **China:** GDP per capita increased by 544.80%, while CO2 emissions per capita increased by 281.71%.
+- **India:** GDP per capita increased by 263.06%, while CO2 emissions per capita increased by 197.24%.
+- **Brazil:** GDP per capita increased by 90.68%, while CO2 emissions per capita increased by 55.70%.
+
+The results indicate absolute decoupling in the per-capita comparison for Italy, Germany, the United Kingdom and the United States. China, India and Brazil show relative decoupling because CO2 emissions per capita increased more slowly than GDP per capita.
+
+The project also compares changes in total CO2 emissions. For example, US total CO2 emissions decreased by approximately 1.49% between 1990 and 2022, compared with a 26.92% decrease in emissions per capita.
+
+Descriptive statistics, including the mean, median and standard deviation of CO2 emissions per capita, are calculated using NumPy.
+
 
 ## Limitations
 
-- The GDP and emissions comparison uses 1990–2022 as the common comparison period because of data availability.
-- Per-capita emissions and total national emissions measure different things and should not be interpreted interchangeably.
-- The analysis uses reported territorial emissions and does not fully account for emissions embodied in imported goods.
-- Changes in GDP and emissions occurring together do not establish that one caused the other.
-- Results depend on dataset coverage, definitions, and the years available for each country.
+- The economic comparison uses the earliest and latest valid common observations for each country. In the current data, these comparisons cover 1990–2022.
+- Descriptive statistics use available observations from 1990–2024.
+- GDP per capita is calculated by dividing GDP by population.
+- Per-capita emissions and total national emissions measure different things.
+- The analysis uses production-based emissions and does not fully account for emissions embodied in imported goods.
+- Changes in GDP and emissions occurring together do not establish causation.
+- Results depend on the coverage and definitions of the source datasets.
+
 
 ## Reproducibility
 
