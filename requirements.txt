@@ -5,3 +5,4 @@ matplotlib==3.9.4
 notebook==7.5.8
 ipykernel==6.31.0
 ipython==8.18.1
+streamlit

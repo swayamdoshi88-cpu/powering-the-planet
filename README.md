@@ -44,21 +44,27 @@ The `data/` folder must be located in the project root, alongside this README fi
 
 ```text
 Powering_the_Planet/
+│
 ├── Powering_the_Planet.ipynb
+├── app.py
 ├── data_loader.py
 ├── analysis.py
 ├── visualizations.py
+├── methodology.md
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
+│
 ├── data/
-│   └── (downloaded CSV datasets)
+│   ├── owid-energy-data.csv
+│   └── owid-co2-data.csv
+│
 └── outputs/
-    co2_emissions_per_capita.png
-    energy_mix.png
-    decoupling_chart.png
-    decoupling_results.csv
-    emissions_statistics.csv
+    ├── co2_emissions_per_capita.png
+    ├── energy_mix.png
+    ├── decoupling_chart.png
+    ├── decoupling_results.csv
+    └── emissions_statistics.csv
 ```
 
 ## Technologies and Libraries
@@ -68,6 +74,7 @@ Powering_the_Planet/
 - **NumPy** — numerical computing
 - **Matplotlib** — data visualization
 - **Jupyter Notebook** — interactive analysis and presentation
+- **Streamlit** — interactive web dashboard
 
 ## Installation and Execution
 
@@ -106,6 +113,41 @@ Alternatively, open `Powering_the_Planet.ipynb` directly in VS Code and select a
 Execute the notebook cells in order, from top to bottom. The notebook imports reusable functions from `data_loader.py`, `analysis.py`, and `visualizations.py`.
 
 Generated charts and analysis results are saved in the `outputs/` folder.
+
+### 7. Running the Streamlit Dashboard
+
+The project also includes an interactive dashboard built using Streamlit.
+
+From the project root directory, install the required dependencies:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
+Launch the dashboard:
+
+```bash
+python3 -m streamlit run app.py
+```
+
+Open the local URL displayed in the terminal, usually `http://localhost:8501`.
+
+The dashboard allows users to select countries and explore CO2 emissions per capita, energy mix, economic growth and descriptive statistics.
+
+
+## Methodology
+
+The project compares seven countries with different geographical and economic contexts.
+
+GDP per capita is calculated by dividing GDP by population. This allows economic changes to be compared while considering differences in population size.
+
+Both total CO2 emissions and CO2 emissions per capita are examined because they provide different perspectives on a country's emissions.
+
+The energy and CO2 datasets are combined using an inner merge on country and year, ensuring that the comparisons use matching observations.
+
+The decoupling analysis compares percentage changes in GDP per capita and CO2 emissions per capita to identify absolute and relative decoupling.
+
+For a detailed explanation of the country selection, calculations, data preparation and limitations, see [Methodology](methodology.md).
 
 
 ## Analysis and Key Findings
@@ -150,7 +192,7 @@ The CSV datasets are not included in the repository. Users must download them se
 
 ## Author
 
-Individual student project  
+Swayam Doshi - Individual student project  
 Course: Coding for Data Science and Data Management  
 University of Milan  
 Academic Year: 2026/27
